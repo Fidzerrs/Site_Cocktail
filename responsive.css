@@ -1,0 +1,44 @@
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px */
+@media all and (max-width:1024px) {
+    .main_container {
+        width: 80%;
+        padding: 5%;
+    }
+}
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 425px */
+@media all and (max-width:425px) {
+    /* Header : les éléments du menu passent les uns sous les autres */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    header img {
+        width: 20%;
+    }
+
+    /* Main container : tout sur une seule colonne */
+    .main_container {
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    #conteneur,
+    #conteneur_2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* On optimise la place en passant les largeurs à 100% */
+    #imgCocktail,
+    p:first-of-type,
+    #conteneur_2 section {
+        width: 100%;
+    }
+    #cocktail_mois {
+        right: 0;
+        top: 0;
+    }
+}
